@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/actionBar_search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        android:title="Search"/>
+
+    <item android:id="@+id/actionBar_cart"
+        android:icon="@drawable/ic_cart"
+        app:showAsAction="always"
+        android:title="Cart" />
+
+    <item android:id="@+id/actionBar_notification"
+        android:icon="@drawable/ic_notifications"
+        app:showAsAction="always"
+        android:title="Notification"/>
+
+    <item android:id="@+id/action_notification1"
+        android:icon="@drawable/ic_more"
+        app:showAsAction="always"
+        android:title="action_notification">
+
+        <menu>
+            <item
+                android:id="@+id/actionBar_language"
+                android:title="Change interface language"
+                android:icon="@drawable/ic_language"/>
+            <item
+                android:id="@+id/actionBar_result_layout"
+                android:title="Change result layout"
+                android:icon="@drawable/ic_layout"/>
+            <item
+                android:id="@+id/actionBar_currency"
+                android:title="Change interface language"
+                android:icon="@drawable/ic_dollar"/>
+        </menu>
+
+    </item>
+
+</menu>

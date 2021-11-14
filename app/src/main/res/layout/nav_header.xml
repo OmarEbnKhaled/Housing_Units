@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:background="@color/primaryColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/image_profile"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/_10sdp"
+        app:riv_oval="true"/>
+
+    <LinearLayout
+        android:id="@+id/header_lin_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header_textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:ellipsize="end"
+            android:text="Omar Khaled"
+            android:textColor="@color/secondaryTextColor"
+            android:maxLines="1"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18ssp"/>
+
+        <TextView
+            android:id="@+id/header_textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="omarabdelaal2013@gmail.com"
+            android:textColor="@color/secondaryTextColor"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="start"
+            android:textSize="@dimen/_10ssp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_lin_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header_textRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:ellipsize="end"
+            android:text="New user? Register now"
+            android:textColor="@color/secondaryTextColor"
+            android:maxLines="1"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/header_textLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:text="Have an account? Login now"
+            android:textColor="@color/secondaryTextColor"
+            android:maxLines="1"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14ssp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
