@@ -7,13 +7,19 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/currency_usd.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_about.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_add_new_unit.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_arrow.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_bathroom.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_bed.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_call.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_cart.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_dollar.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_favorite.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_image.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_key.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_language.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_layout.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_location.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_notifications.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_profile.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_requests.xml" value="0.24177631578947367" />
@@ -21,10 +27,17 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_search.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_settings.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_share.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_television.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_ur_units.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/image_profile.xml" value="0.24177631578947367" />
-        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/activity_main.xml" value="0.23157894736842105" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/activity_second.xml" value="0.23157894736842105" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_cart.xml" value="0.23157894736842105" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_login.xml" value="0.22269736842105264" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_notification.xml" value="0.22269736842105264" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/header.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/item_container_units.xml" value="0.33" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/item_units.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/nav_header.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/menu/drawer_menu.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />
