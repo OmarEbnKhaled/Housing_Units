@@ -14,4 +14,10 @@
     <color name="primaryDarkColor">#c41c00</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#FFFFFF</color>
+
+    <color name="gray">#66666666</color>
+    <color name="transGray">#80000000</color>
+    <color name="lineColor">#80AAAAAA</color>
+    <color name="transparent">#00AAAAAA</color>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.omar.housingunits;
+package com.omar.housingunits.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 import com.omar.housingunits.Adapters.FragmentAdapter;
+import com.omar.housingunits.R;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.omar.housingunits;
+package com.omar.housingunits.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,6 +10,7 @@ import android.os.Bundle;
 import com.omar.housingunits.Fragments.CartFragment;
 import com.omar.housingunits.Fragments.LoginFragment;
 import com.omar.housingunits.Fragments.NotificationFragment;
+import com.omar.housingunits.R;
 
 import java.util.Objects;
 
