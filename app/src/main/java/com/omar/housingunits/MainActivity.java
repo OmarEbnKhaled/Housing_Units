@@ -7,7 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -48,17 +47,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.actionBar_notification:
-                startIntentSecondActivity("notification");
-                break;
-            case R.id.actionBar_cart:
-                startIntentSecondActivity("cart");
-                break;
-        }
+        startIntentSecondActivity(item.getItemId());
         return super.onOptionsItemSelected(item);
     }
 
@@ -67,9 +58,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    private void startIntentSecondActivity(String Fragment){
+    private void startIntentSecondActivity(int ID_Fragment){
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        intent.putExtra("fragment",Fragment);
+        intent.putExtra("fragment",ID_Fragment);
         startActivity(intent);
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.omar.housingunits.Fragments.CartFragment;
@@ -27,8 +28,7 @@ public class SecondActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             extras = getIntent().getExtras();
             if(extras != null) {
-                String fragment = extras.getString("fragment");
-                setFragment(fragment);
+                setFragment(extras.getInt("fragment"));
             }else
                 finish();
         } else {
@@ -36,12 +36,13 @@ public class SecondActivity extends AppCompatActivity {
         }
     }
 
-    private void setFragment(String fragment){
-        switch (fragment){
-            case "notification":
+    @SuppressLint("NonConstantResourceId")
+    private void setFragment(int ID_fragment){
+        switch (ID_fragment){
+            case R.id.actionBar_notification:
                 loadFragments(new NotificationFragment());
                 break;
-            case "cart":
+            case R.id.actionBar_cart:
                 loadFragments(new CartFragment());
                 break;
         }
