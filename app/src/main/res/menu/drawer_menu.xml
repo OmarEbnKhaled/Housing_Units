@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="For Customer">
+    <item android:title="@string/for_customer">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_requests"
-                    android:title="Requests"
+                    android:title="@string/requests"
                     android:icon="@drawable/ic_requests"/>
                 <item
                     android:id="@+id/nav_reservations"
-                    android:title="Reservations"
+                    android:title="@string/reservations"
                     android:icon="@drawable/ic_reservations"/>
                 <item
                     android:id="@+id/nav_favorite"
-                    android:title="Your Favorites"
+                    android:title="@string/your_favorites"
                     android:icon="@drawable/ic_favorite"/>
                 <item
                     android:id="@+id/nav_Profile"
-                    android:title="Profile"
+                    android:title="@string/profile"
                     android:icon="@drawable/ic_profile"/>
                 <item
                     android:id="@+id/nav_settings"
-                    android:title="Settings"
+                    android:title="@string/settings"
                     android:icon="@drawable/ic_settings"/>
             </group>
         </menu>
     </item>
 
-    <item android:title="For Unit Owners">
+    <item android:title="@string/for_units_owners">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_add_new_unit"
-                    android:title="Add a New Unit"
+                    android:title="@string/add_a_new_unit"
                     android:icon="@drawable/ic_add_new_unit"/>
                 <item
                     android:id="@+id/nav_ur_units"
-                    android:title="Your Units on The App."
+                    android:title="@string/your_units_on_the_app"
                     android:icon="@drawable/ic_ur_units"/>
                 <item
                     android:id="@+id/nav_reservation_requests"
-                    android:title="Reservation Requests"
+                    android:title="@string/reservation_requests"
                     android:icon="@drawable/ic_dollar"/>
             </group>
         </menu>
     </item>
 
-    <item android:title="Contact us">
+    <item android:title="@string/contact_us">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_call_us"
-                    android:title="Call us"
+                    android:title="@string/call_us"
                     android:icon="@drawable/ic_call"/>
 
                 <item
                     android:id="@+id/nav_about_app"
-                    android:title="About The App."
+                    android:title="@string/about_the_app"
                     android:icon="@drawable/ic_about"/>
 
                 <item
                     android:id="@+id/nav_share_app"
-                    android:title="Share The App."
+                    android:title="@string/share_the_app"
                     android:icon="@drawable/ic_share"/>
             </group>
         </menu>
@@ -70,7 +70,7 @@
 
     <item
         android:id="@+id/nav_logOut"
-        android:title="Log Out"
+        android:title="@string/log_out"
         android:icon="@drawable/ic_logout"/>
 
 </menu>

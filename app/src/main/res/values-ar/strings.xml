@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">وحدات سكنية</string>
+    <string name="for_customer">للعملاء</string>
+    <string name="requests">طلباتك</string>
+    <string name="reservations">حجوزاتك</string>
+    <string name="your_favorites">وجداتك المفضلة</string>
+    <string name="profile">حسابك</string>
+    <string name="settings">الإعدادت</string>
+    <string name="for_units_owners">خاص بمالكي الوحدات</string>
+    <string name="add_a_new_unit">أضف إعلان جديد</string>
+    <string name="your_units_on_the_app">إعلاناتك على التطبيق</string>
+    <string name="reservation_requests">طلبات حجز وحداتك</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="call_us">اتصل بنا</string>
+    <string name="about_the_app">عن التطبيق</string>
+    <string name="share_the_app">مشاركة التطبيق</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="search">بحث</string>
+    <string name="cart">السلة</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="more">المزيد</string>
+    <string name="change_interface_language">تغيير لغة العرض</string>
+    <string name="change_result_layout">تغيير طريقة العرض</string>
+    <string name="details">تفاصيل</string>
+    <string name="room">غرفة</string>
+    <string name="bed">سرير</string>
+    <string name="bathroom">حمام</string>
+    <string name="change_default_currency">تغيير العملة المستخدمة</string>
+    <string name="reviews">آراء العملاء</string>
+    <string name="about_owner">عن المعلن</string>
+    <string name="location_map">شاهد الخريطة</string>
+</resources>

@@ -14,7 +14,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/main_toolBar"
+            android:id="@+id/second_toolBar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize">
 

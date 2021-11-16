@@ -6,35 +6,36 @@
     <item android:id="@+id/actionBar_search"
         android:icon="@drawable/ic_search"
         app:showAsAction="always"
-        android:title="Search"/>
+        android:title="@string/search"/>
 
     <item android:id="@+id/actionBar_cart"
         android:icon="@drawable/ic_cart"
         app:showAsAction="always"
-        android:title="Cart" />
+        android:title="@string/cart" />
 
     <item android:id="@+id/actionBar_notification"
         android:icon="@drawable/ic_notifications"
         app:showAsAction="always"
-        android:title="Notification"/>
+        android:title="@string/notifications"/>
 
     <item
+        android:id="@+id/actionBar_more"
         android:icon="@drawable/ic_more"
         app:showAsAction="always"
-        android:title="action_notification">
+        android:title="@string/more">
 
         <menu>
             <item
                 android:id="@+id/actionBar_language"
-                android:title="Change interface language"
+                android:title="@string/change_interface_language"
                 android:icon="@drawable/ic_language"/>
             <item
                 android:id="@+id/actionBar_result_layout"
-                android:title="Change result layout"
+                android:title="@string/change_result_layout"
                 android:icon="@drawable/ic_layout"/>
             <item
                 android:id="@+id/actionBar_currency"
-                android:title="Change interface language"
+                android:title="@string/change_default_currency"
                 android:icon="@drawable/ic_dollar"/>
         </menu>
 

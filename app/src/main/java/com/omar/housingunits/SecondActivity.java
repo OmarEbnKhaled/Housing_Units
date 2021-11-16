@@ -20,7 +20,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Toolbar toolbar = findViewById(R.id.main_toolBar);
+        Toolbar toolbar = findViewById(R.id.second_toolBar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
