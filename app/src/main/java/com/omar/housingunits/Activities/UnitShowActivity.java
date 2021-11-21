@@ -5,15 +5,39 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 import com.omar.housingunits.Adapters.FragmentAdapter;
+import com.omar.housingunits.Adapters.SliderAdapter;
 import com.omar.housingunits.R;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class UnitShowActivity extends AppCompatActivity {
+import toan.android.floatingactionmenu.FloatingActionButton;
+import toan.android.floatingactionmenu.FloatingActionsMenu;
+
+public class UnitShowActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private FloatingActionsMenu fab_menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +47,8 @@ public class UnitShowActivity extends AppCompatActivity {
         setupToolBar();
 
         setupTabLayout();
+
+        setSlider();
     }
 
     private void setupToolBar(){
@@ -69,11 +95,114 @@ public class UnitShowActivity extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fab_call, fab_message, fab_add_contact, fab_copy;
+
+        fab_call = findViewById(R.id.fab_call);
+        fab_call.setOnClickListener(this);
+
+        fab_message = findViewById(R.id.fab_message);
+        fab_message.setOnClickListener(this);
+
+        fab_add_contact = findViewById(R.id.fab_add_contact);
+        fab_add_contact.setOnClickListener(this);
+
+        fab_copy = findViewById(R.id.fab_copy);
+        fab_copy.setOnClickListener(this);
+
+        View view = findViewById(R.id.background_fab_menu);
+        fab_menu = findViewById(R.id.fab_menu);
+        fab_menu.setOnFloatingActionsMenuUpdateListener(new FloatingActionsMenu.OnFloatingActionsMenuUpdateListener() {
+            @Override
+            public void onMenuExpanded() {
+                view.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onMenuCollapsed() {
+                view.setVisibility(View.GONE);
+            }
+        });
+
+    }
+
+    private void setSlider() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.omar);
+        List<Bitmap> bitmaps = new ArrayList<>();
+        for (int i=0; i<=7; i++){
+            bitmaps.add(bitmap);
+        }
+
+        SliderView sliderView = findViewById(R.id.slider);
+        SliderAdapter sliderAdapter = new SliderAdapter(bitmaps);
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()){
+            case R.id.fab_call:
+                Intent intentDial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "0123456789"));
+                startActivity(intentDial);
+                break;
+            case R.id.fab_message:
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + "0123456789"));
+                intent.putExtra("sms_body", "message");
+                startActivity(intent);
+                break;
+            case R.id.fab_add_contact:
+                addContact();
+                break;
+            case R.id.fab_copy:
+                copyPhoneNumber();
+                break;
+        }
+    }
+
+    private void addContact(){
+        Intent contactIntent = new Intent(ContactsContract.Intents.Insert. ACTION ) ;
+        contactIntent.setType(ContactsContract.RawContacts. CONTENT_TYPE ) ;
+        contactIntent
+                .putExtra(ContactsContract.Intents.Insert. NAME , "OMAR")
+                .putExtra(ContactsContract.Intents.Insert. PHONE , "0123456789") ;
+        startActivity(contactIntent);
+    }
+
+    private void copyPhoneNumber(){
+        ClipboardManager clipboard = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        }
+        ClipData clip = ClipData.newPlainText("label", "0123456789");
+        if (clipboard != null) {
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(getApplicationContext(), "Phone Number copied", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.unit_menu, menu);
+        return true;
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
+        super.onBackPressed();
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (fab_menu.isExpanded()){
+            fab_menu.collapse();
+        }else {
+            super.onBackPressed();
+        }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Activities.UnitShowActivity">
 
@@ -12,29 +12,135 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-      <androidx.appcompat.widget.Toolbar
-          android:id="@+id/unit_show_toolBar"
-          android:layout_width="match_parent"
-          android:layout_height="?actionBarSize"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/unit_show_toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <RelativeLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:background="@color/lineColor"
+                    app:sliderAnimationDuration="1500"
+                    app:sliderAutoCycleDirection="right"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="1000"
+                    app:sliderIndicatorEnabled="true"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="3dp"
+                    app:sliderIndicatorSelectedColor="@color/primaryColor"
+                    app:sliderIndicatorUnselectedColor="@color/white"
+                    app:sliderScrollTimeInSec="5"
+                    app:sliderStartAutoCycle="true" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    app:layout_collapseMode="pin"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/tab_layout"/>
+            android:layout_below="@id/tab_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-    </RelativeLayout>
+        <View
+            android:id="@+id/background_fab_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2FFFFFF"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <toan.android.floatingactionmenu.FloatingActionsMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="@dimen/_12sdp"
+            app:fab_labelStyle="@style/FloatingStyle"
+            app:fab_addButtonColorNormal="@color/primaryColor"
+            app:fab_addButtonColorPressed="@color/primaryLightColor"
+            app:fab_expandDirection="up"
+            app:fab_labelsPosition="left"
+            app:fab_menuIcon="@drawable/ic_call"
+            tools:ignore="RtlHardcoded">
+
+            <toan.android.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/primaryColor"
+                app:fab_colorPressed="@color/primaryLightColor"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/ic_call"
+                app:fab_title="Call"/>
+
+            <toan.android.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/primaryColor"
+                app:fab_colorPressed="@color/primaryLightColor"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/ic_message"
+                app:fab_title="Message"/>
+
+            <toan.android.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_add_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/primaryColor"
+                app:fab_colorPressed="@color/primaryLightColor"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/ic_profile"
+                app:fab_title="Add to Contacts"/>
+
+            <toan.android.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/primaryColor"
+                app:fab_colorPressed="@color/primaryLightColor"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/ic_copy"
+                app:fab_title="Copy"/>
+
+        </toan.android.floatingactionmenu.FloatingActionsMenu>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </LinearLayout>

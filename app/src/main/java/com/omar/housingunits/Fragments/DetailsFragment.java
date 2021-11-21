@@ -1,5 +1,7 @@
 package com.omar.housingunits.Fragments;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,7 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.omar.housingunits.Adapters.SliderAdapter;
 import com.omar.housingunits.R;
+import com.omar.housingunits.databinding.FragmentDetailsBinding;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +35,7 @@ public class DetailsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private FragmentDetailsBinding binding;
 
     public DetailsFragment() {
         // Required empty public constructor
@@ -61,6 +72,10 @@ public class DetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_details, container, false);
+
+        binding = FragmentDetailsBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        return root;
     }
 }

@@ -24,7 +24,6 @@ import android.view.View;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
 import com.omar.housingunits.R;
-import com.omar.housingunits.Utilities.Constants;
 import com.omar.housingunits.Utilities.PreferenceManager;
 
 import java.util.Locale;
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
 

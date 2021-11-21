@@ -19,5 +19,5 @@
     <color name="transGray">#80000000</color>
     <color name="lineColor">#80AAAAAA</color>
     <color name="transparent">#00AAAAAA</color>
-
+    <color name="yellow">#ffff00</color>
 </resources>
