@@ -95,7 +95,7 @@
                     android:layout_gravity="end"
                     app:icon="@drawable/ic_star"
                     app:iconTint="@color/yellow"
-                    android:text="تقييم"
+                    android:text="@string/rating"
                     android:textStyle="bold"
                     android:layout_weight="1"/>
 

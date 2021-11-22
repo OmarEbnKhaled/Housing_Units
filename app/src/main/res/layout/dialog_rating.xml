@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_25sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/rating_unit"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:progressTint="@color/primaryColor"
+            android:progressBackgroundTint="@color/mediumGray"
+            android:secondaryProgressTint="@color/yellow"
+            android:rating="3.5"
+            android:stepSize="0.5"
+            android:numStars="5"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFieldLabel"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="wrap_content"
+            style="@style/TextInputLayout"
+            android:hint="@string/write_a_comment"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/rating"
+            app:icon="@drawable/ic_star"
+            app:iconTint="@color/yellow"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

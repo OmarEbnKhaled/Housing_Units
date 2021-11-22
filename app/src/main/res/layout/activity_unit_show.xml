@@ -107,7 +107,7 @@
                 app:fab_colorPressed="@color/primaryLightColor"
                 app:fab_size="mini"
                 app:fab_icon="@drawable/ic_call"
-                app:fab_title="Call"/>
+                app:fab_title="@string/call"/>
 
             <toan.android.floatingactionmenu.FloatingActionButton
                 android:id="@+id/fab_message"
@@ -117,7 +117,7 @@
                 app:fab_colorPressed="@color/primaryLightColor"
                 app:fab_size="mini"
                 app:fab_icon="@drawable/ic_message"
-                app:fab_title="Message"/>
+                app:fab_title="@string/message"/>
 
             <toan.android.floatingactionmenu.FloatingActionButton
                 android:id="@+id/fab_add_contact"
@@ -127,7 +127,7 @@
                 app:fab_colorPressed="@color/primaryLightColor"
                 app:fab_size="mini"
                 app:fab_icon="@drawable/ic_profile"
-                app:fab_title="Add to Contacts"/>
+                app:fab_title="@string/add_to_contacts"/>
 
             <toan.android.floatingactionmenu.FloatingActionButton
                 android:id="@+id/fab_copy"
@@ -137,7 +137,7 @@
                 app:fab_colorPressed="@color/primaryLightColor"
                 app:fab_size="mini"
                 app:fab_icon="@drawable/ic_copy"
-                app:fab_title="Copy"/>
+                app:fab_title="@string/copy"/>
 
         </toan.android.floatingactionmenu.FloatingActionsMenu>
 

@@ -34,4 +34,15 @@
     <string name="about_owner">About Owner</string>
     <string name="location_map">Location Map</string>
     <string name="share_the_unit">Share The Unit</string>
+    <string name="phone_no_copied">Phone Number is Copied</string>
+    <string name="call">Call</string>
+    <string name="message">Message</string>
+    <string name="add_to_contacts">Add to Contacts</string>
+    <string name="copy">Copy</string>
+    <string name="write_a_comment">Write a Comment</string>
+    <string name="rating">Rating</string>
+    <string name="rating_unit">Unit Rating :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ads">Ads</string>
 </resources>

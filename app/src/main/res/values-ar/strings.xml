@@ -31,4 +31,13 @@
     <string name="about_owner">عن المعلن</string>
     <string name="location_map">شاهد الخريطة</string>
     <string name="share_the_unit">مشاركة الوحدة</string>
+    <string name="phone_no_copied">تم نسخ رقم الهاتفز</string>
+    <string name="copy">نسخ</string>
+    <string name="add_to_contacts">إضافة جهة إتصال</string>
+    <string name="message">مراسلة</string>
+    <string name="call">إتصال</string>
+    <string name="write_a_comment">اكتب تعليق</string>
+    <string name="rating">تقييم</string>
+    <string name="rating_unit">تقييم الوحدة :</string>
+    <string name="ads">إعلان</string>
 </resources>

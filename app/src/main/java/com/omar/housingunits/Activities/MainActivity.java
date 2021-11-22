@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -23,16 +24,15 @@ import android.view.View;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
+import com.omar.housingunits.Fragments.CategoryFragment;
 import com.omar.housingunits.R;
-import com.omar.housingunits.Utilities.PreferenceManager;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    private PreferenceManager preferenceManager;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
     private Dialog dialog;
 
     @Override
@@ -40,20 +40,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*preferenceManager = new PreferenceManager(this);
-
-        if (preferenceManager.getBoolean(Constants.KEY_REBUILDING)){
-            if (preferenceManager.getString(Constants.KEY_REFERENCE_LANGUAGE) != null){
-                setLanguage(preferenceManager.getString(Constants.KEY_REFERENCE_LANGUAGE));
-            }
-        }
-
-        preferenceManager.putBoolean(Constants.KEY_REBUILDING, true);*/
-
         setupActivity();
 
-        MaterialButton details = findViewById(R.id.item_btn_details);
-        details.setOnClickListener(this);
+        loadFragment(new CategoryFragment());
     }
 
     private void setupActivity(){
@@ -68,6 +57,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void loadFragment(Fragment fragment){
+        if (fragment != null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.main_fragment,fragment)
+                    .commit();
+        }
     }
 
     @Override
@@ -119,9 +116,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         configuration.setLayoutDirection(new Locale(language));
         resources.updateConfiguration(configuration, metrics);
         onConfigurationChanged(configuration);
-
-        /*preferenceManager.putString(Constants.KEY_REFERENCE_LANGUAGE,language);
-        preferenceManager.putBoolean(Constants.KEY_REBUILDING, false);*/
 
         Intent intent = getIntent();
         finish();

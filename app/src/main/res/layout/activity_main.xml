@@ -26,11 +26,95 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <include
+        <!--<HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_3sdp"
+                app:singleSelection="false">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="إيجار"
+                    android:textSize="@dimen/_14ssp"
+                    style="@style/ChipStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="تمليك"
+                    android:textSize="@dimen/_14ssp"
+                    style="@style/ChipStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="شقة مفروشة"
+                    android:textSize="@dimen/_14ssp"
+                    android:checked="true"
+                    style="@style/ChipStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="فيلا"
+                    android:textSize="@dimen/_14ssp"
+                    style="@style/ChipStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="كومباوند"
+                    android:textSize="@dimen/_14ssp"
+                    style="@style/ChipStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="شاليه"
+                    android:textSize="@dimen/_14ssp"
+                    style="@style/ChipStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="مصيف"
+                    android:checked="true"
+                    android:textSize="@dimen/_14ssp"
+                    style="@style/ChipStyle"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/lineColor"/>-->
+
+        <!--<include
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_3sdp"
-            layout="@layout/item_container_units"/>
+            layout="@layout/item_container_units"/>-->
+
+        <FrameLayout
+            android:id="@+id/main_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
     </LinearLayout>
 

@@ -17,9 +17,11 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.omar.housingunits.Adapters.FragmentAdapter;
 import com.omar.housingunits.Adapters.SliderAdapter;
@@ -123,6 +125,14 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        view.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                fab_menu.collapse();
+                return true;
+            }
+        });
+
     }
 
     private void setSlider() {
@@ -151,7 +161,7 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.fab_message:
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + "0123456789"));
-                intent.putExtra("sms_body", "message");
+                intent.putExtra("sms_body", "Housing Units");
                 startActivity(intent);
                 break;
             case R.id.fab_add_contact:
@@ -167,7 +177,7 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
         Intent contactIntent = new Intent(ContactsContract.Intents.Insert. ACTION ) ;
         contactIntent.setType(ContactsContract.RawContacts. CONTENT_TYPE ) ;
         contactIntent
-                .putExtra(ContactsContract.Intents.Insert. NAME , "OMAR")
+                .putExtra(ContactsContract.Intents.Insert. NAME , "Housing Units")
                 .putExtra(ContactsContract.Intents.Insert. PHONE , "0123456789") ;
         startActivity(contactIntent);
     }
@@ -180,7 +190,7 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
         ClipData clip = ClipData.newPlainText("label", "0123456789");
         if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
-            Toast.makeText(getApplicationContext(), "Phone Number copied", Toast.LENGTH_SHORT).show();
+            Snackbar.make((View) findViewById(R.id.background_fab_menu), R.string.phone_no_copied, Snackbar.LENGTH_SHORT).show();
         }
     }
 
