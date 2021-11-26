@@ -3,7 +3,6 @@ package com.omar.housingunits.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,20 +13,20 @@ import com.omar.housingunits.R;
 
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.ViewHolder> {
 
     private final List<CategoryModel> list;
-    private onCategoryListener onCategoryListener;
+    private onSubCategoryListener onSubCategoryListener;
 
-    public CategoryAdapter(List<CategoryModel> list, onCategoryListener onCategoryListener) {
+    public SubCategoryAdapter(List<CategoryModel> list, onSubCategoryListener onSubCategoryListener) {
         this.list = list;
-        this.onCategoryListener = onCategoryListener;
+        this.onSubCategoryListener = onSubCategoryListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false), onCategoryListener);
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sub_category, parent, false), onSubCategoryListener);
     }
 
     @Override
@@ -35,7 +34,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
         holder.title.setText(list.get(position).getTitle());
         holder.no_ads.setText(list.get(position).getNo_ads());
-        holder.icon.setImageResource(list.get(position).getIcon());
     }
 
     @Override
@@ -46,27 +44,25 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView title, no_ads;
-        ImageView icon;
-        onCategoryListener onCategoryListener;
+        onSubCategoryListener onSubCategoryListener;
 
-        public ViewHolder(@NonNull View itemView, onCategoryListener onCategoryListener) {
+        public ViewHolder(@NonNull View itemView, onSubCategoryListener onSubCategoryListener) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.item_category_title);
-            no_ads = itemView.findViewById(R.id.item_category_no_ads);
-            icon = itemView.findViewById(R.id.item_category_image);
-            this.onCategoryListener = onCategoryListener;
+            title = itemView.findViewById(R.id.item_sub_category_title);
+            no_ads = itemView.findViewById(R.id.item_sub_category_no_ads);
+            this.onSubCategoryListener = onSubCategoryListener;
 
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            onCategoryListener.onCategoryClick(getAdapterPosition());
+            onSubCategoryListener.onSubCategoryClick(getAdapterPosition());
         }
     }
 
-    public interface onCategoryListener {
-        void onCategoryClick(int position);
+    public interface onSubCategoryListener {
+        void onSubCategoryClick(int position);
     }
 }

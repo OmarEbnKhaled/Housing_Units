@@ -25,6 +25,7 @@ import android.view.View;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
 import com.omar.housingunits.Fragments.CategoryFragment;
+import com.omar.housingunits.Fragments.NotificationFragment;
 import com.omar.housingunits.R;
 
 import java.util.Locale;
@@ -32,7 +33,6 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
     private Dialog dialog;
 
     @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void setupActivity(){
         drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         Toolbar toolbar = findViewById(R.id.main_toolBar);
 
         setSupportActionBar(toolbar);
@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void loadFragment(Fragment fragment){
+    public void loadFragment(Fragment fragment){
         if (fragment != null){
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_fragment,fragment)
+                    .addToBackStack(null)
                     .commit();
         }
     }
@@ -87,7 +88,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.actionBar_currency:
                 break;
-            default:
+            case R.id.actionBar_notification:
+                loadFragment(new NotificationFragment());
+                break;
+            case R.id.actionBar_cart:
                 startIntentSecondActivity(item.getItemId());
                 break;
         }
@@ -137,9 +141,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.btn_english:
                 setLanguage("en");
                 dialog.dismiss();
-                break;
-            case R.id.item_btn_details:
-                startActivity(new Intent(MainActivity.this, UnitShowActivity.class));
                 break;
         }
     }

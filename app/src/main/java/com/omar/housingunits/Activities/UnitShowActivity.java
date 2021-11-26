@@ -19,11 +19,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
-import com.omar.housingunits.Adapters.FragmentAdapter;
+import com.omar.housingunits.Adapters.ViewPagerAdapter;
 import com.omar.housingunits.Adapters.SliderAdapter;
 import com.omar.housingunits.R;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -65,8 +64,8 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
         ViewPager2 pager2 = findViewById(R.id.view_pager2);
 
         FragmentManager fm = getSupportFragmentManager();
-        FragmentAdapter fragmentAdapter = new FragmentAdapter(fm, getLifecycle());
-        pager2.setAdapter(fragmentAdapter);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(fm, getLifecycle());
+        pager2.setAdapter(viewPagerAdapter);
 
         tabLayout.addTab(tabLayout.newTab().setText(R.string.details));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.reviews));

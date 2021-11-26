@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HousingUnits" >
 
-        <activity android:name=".Activities.UnitShowActivity"/>
+        <activity android:name=".Activities.UnitShowActivity" />
         <activity android:name=".Activities.SecondActivity"/>
         <activity
             android:name=".Activities.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

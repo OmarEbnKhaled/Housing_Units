@@ -11,9 +11,9 @@ import com.omar.housingunits.Fragments.DetailsFragment;
 import com.omar.housingunits.Fragments.LocationMapFragment;
 import com.omar.housingunits.Fragments.ReviewsFragment;
 
-public class FragmentAdapter extends FragmentStateAdapter {
+public class ViewPagerAdapter extends FragmentStateAdapter {
 
-    public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+    public ViewPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 
