@@ -69,7 +69,6 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.onCate
                              Bundle savedInstanceState) {
 
         FragmentCategoryBinding binding = FragmentCategoryBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
         List<CategoryModel> list = new ArrayList<>();
         list.add(new CategoryModel("شقق","1350",R.drawable.ic_bed));
@@ -84,7 +83,7 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.onCate
         binding.recyclerCategory.setLayoutManager(new LinearLayoutManager(getActivity()));
         binding.recyclerCategory.setAdapter(adapter);
 
-        return root;
+        return binding.getRoot();
     }
 
     @Override

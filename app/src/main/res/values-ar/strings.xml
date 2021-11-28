@@ -56,4 +56,5 @@
     <string name="UserNameRequire">اسم الستخدم مطلوب</string>
     <string name="confirm_email">أكد بريدك الآلكتروني</string>
     <string name="ur_phone_no">رقم هاتفك المحمول</string>
+    <string name="rating_the_owner">تقييم البائع</string>
 </resources>

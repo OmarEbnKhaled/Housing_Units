@@ -94,6 +94,11 @@ public class SubCategoryFragment extends Fragment implements SubCategoryAdapter.
 
     @Override
     public void onSubCategoryClick(int position) {
-        startActivity(new Intent(getActivity(), UnitShowActivity.class));
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations( R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left)
+                .replace(R.id.main_fragment, new ItemsFragment())
+                .addToBackStack(null)
+                .commit();
     }
 }

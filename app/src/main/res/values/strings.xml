@@ -60,4 +60,7 @@
     <string name="create_account">You don\'t have an Account? Create Now.</string>
     <string name="confirm_email">Confirm your email</string>
     <string name="ur_phone_no">Your phone number</string>
+    <string name="rating_the_owner">Rating The Owner</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
