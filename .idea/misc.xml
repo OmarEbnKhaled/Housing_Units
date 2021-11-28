@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable-v24/ic_eye_password.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable-v24/ic_star.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/account_circle.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/background_label.xml" value="0.24177631578947367" />
@@ -16,7 +17,10 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_call.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_cart.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_copy.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_dark_mode.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_dollar.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_edit.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_eye_password.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_favorite.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_image.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_key.xml" value="0.24177631578947367" />
@@ -50,6 +54,7 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_login.xml" value="0.22269736842105264" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_notification.xml" value="0.22269736842105264" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_reviews.xml" value="0.23157894736842105" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_sign_up.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_sub_category.xml" value="0.1" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/header.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/ic_star.xml" value="0.23157894736842105" />

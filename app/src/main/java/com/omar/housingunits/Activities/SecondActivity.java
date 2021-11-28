@@ -46,13 +46,16 @@ public class SecondActivity extends AppCompatActivity {
             case R.id.actionBar_cart:
                 loadFragments(new CartFragment());
                 break;
+            case R.id.nav_Profile:
+                loadFragments(new LoginFragment());
+                break;
         }
     }
 
     private void loadFragments(Fragment fragment){
         if (fragment != null){
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayout,fragment)
+                    .replace(R.id.second_frameLayout,fragment)
                     .commit();
         }
     }

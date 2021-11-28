@@ -18,6 +18,7 @@
     <color name="gray">#66666666</color>
     <color name="mediumGray">#DEDEDE</color>
     <color name="darkGray">#858585</color>
+    <color name="lightGray">#1A858585</color>
     <color name="transGray">#80000000</color>
     <color name="lineColor">#80AAAAAA</color>
     <color name="transparent">#00AAAAAA</color>

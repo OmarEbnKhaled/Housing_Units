@@ -95,6 +95,5 @@ public class SubCategoryFragment extends Fragment implements SubCategoryAdapter.
     @Override
     public void onSubCategoryClick(int position) {
         startActivity(new Intent(getActivity(), UnitShowActivity.class));
-        Log.d("OMAR", ": Clicked");
     }
 }

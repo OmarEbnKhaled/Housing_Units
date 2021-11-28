@@ -18,7 +18,7 @@
         <item name="overlapAnchor">false</item>
         <item name="android:dropDownVerticalOffset">?attr/actionBarSize</item>
     </style>
-    
+
     <style name="FloatingStyle">
         <item name="android:background">@drawable/background_label</item>
         <item name="android:textColor">@color/white</item>
@@ -31,8 +31,15 @@
     </style>
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="android:textColorHint">@color/mediumGray</item>
-        <item name="boxStrokeColor">@color/primaryColor</item>
+        <item name="startIconTint">@color/icon_color</item>
+        <item name="boxBackgroundColor">@color/lightGray</item>
+    </style>
+
+    <style name="RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/radio_button_color</item>
+        <item name="android:textColor">@color/radio_button_color</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
     </style>
 
 </resources>

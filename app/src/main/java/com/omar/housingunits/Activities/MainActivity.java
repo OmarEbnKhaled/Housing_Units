@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (fragment != null){
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_fragment,fragment)
-                    .addToBackStack(null)
                     .commit();
         }
     }
@@ -145,8 +144,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_requests:
+                break;
+            case R.id.nav_reservations:
+                break;
+            case R.id.nav_favorite:
+                break;
+            case R.id.nav_Profile:
+                startIntentSecondActivity(item.getItemId());
+                break;
+            case R.id.nav_settings:
+                break;
+            case R.id.nav_add_new_unit:
+                break;
+            case R.id.nav_ur_units:
+                break;
+            case R.id.nav_reservation_requests:
+                break;
+            case R.id.nav_call_us:
+                break;
+            case R.id.nav_about_app:
+                break;
+            case R.id.nav_share_app:
+                break;
+        }
         return true;
     }
 
