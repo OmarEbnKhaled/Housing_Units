@@ -31,8 +31,9 @@
     </style>
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="startIconTint">@color/icon_color</item>
+        <item name="startIconTint">@color/primaryColor</item>
         <item name="boxBackgroundColor">@color/lightGray</item>
+        <item name="boxStrokeColor">@color/icon_color</item>
     </style>
 
     <style name="RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">

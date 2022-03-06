@@ -10,6 +10,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -19,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -96,7 +98,7 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
-        FloatingActionButton fab_call, fab_message, fab_add_contact, fab_copy;
+        FloatingActionButton fab_call, fab_message, fab_add_contact, fab_copy, fab_whatsapp;
 
         fab_call = findViewById(R.id.fab_call);
         fab_call.setOnClickListener(this);
@@ -109,6 +111,9 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
 
         fab_copy = findViewById(R.id.fab_copy);
         fab_copy.setOnClickListener(this);
+
+        fab_whatsapp = findViewById(R.id.fab_whatsapp);
+        fab_whatsapp.setOnClickListener(this);
 
         View view = findViewById(R.id.background_fab_menu);
         fab_menu = findViewById(R.id.fab_menu);
@@ -169,6 +174,24 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
             case R.id.fab_copy:
                 copyPhoneNumber();
                 break;
+            case R.id.fab_whatsapp:
+                whatsApp("01008304528");
+        }
+    }
+
+    private void whatsApp(String number){
+        try {
+            Cursor c = getContentResolver().query(ContactsContract.Data.CONTENT_URI,
+                    new String[] {ContactsContract.Contacts.Data._ID}, ContactsContract.Data.DATA1 + "=?",
+                    new String[] { number }, null);
+            c.moveToFirst();
+            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("content://com.android.contacts/data/" + c.getString(0)));
+            i.putExtra(Intent.EXTRA_TEXT, "Hello!");
+
+            startActivity(i);
+            c.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -189,7 +212,7 @@ public class UnitShowActivity extends AppCompatActivity implements View.OnClickL
         ClipData clip = ClipData.newPlainText("label", "0123456789");
         if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
-            Snackbar.make((View) findViewById(R.id.background_fab_menu), R.string.phone_no_copied, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make((View) findViewById(R.id.background_fab_menu), R.string.phone_is_copied, Snackbar.LENGTH_LONG).show();
         }
     }
 

@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable-v24/background_image.xml" value="0.19" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable-v24/ic_eye_password.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable-v24/ic_star.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/account_circle.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/background_image.xml" value="0.19" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/background_label.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/background_loading_dialog.xml" value="0.1895" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/bg_edit_text.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/chip_selection.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/currency_usd.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_about.xml" value="0.24177631578947367" />
@@ -39,7 +43,7 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_star.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_television.xml" value="0.24177631578947367" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/ic_ur_units.xml" value="0.24177631578947367" />
-        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/image_profile.xml" value="0.24177631578947367" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/drawable/image_profile.xml" value="0.21" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/activity_feedback.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/activity_main.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/activity_second.xml" value="0.23157894736842105" />
@@ -52,8 +56,9 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_details.xml" value="0.25" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_items.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_location_map.xml" value="0.23157894736842105" />
-        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_login.xml" value="0.22269736842105264" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_login.xml" value="0.22671009771986972" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_notification.xml" value="0.22269736842105264" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_profile.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_reviews.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_sign_up.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/fragment_sub_category.xml" value="0.1" />
@@ -64,6 +69,7 @@
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/item_slider.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/item_sub_category.xml" value="0.18486842105263157" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/item_units.xml" value="0.23157894736842105" />
+        <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/loading_dialog.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/nav_header.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/layout/view_pager_layout.xml" value="0.23157894736842105" />
         <entry key="..\:/Users/omara/AndroidStudioProjects/HousingUnits/app/src/main/res/menu/drawer_menu.xml" value="0.23157894736842105" />

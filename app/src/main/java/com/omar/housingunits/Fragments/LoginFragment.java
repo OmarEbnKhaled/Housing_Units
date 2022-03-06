@@ -4,11 +4,19 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.omar.housingunits.Activities.MainActivity;
 import com.omar.housingunits.R;
+import com.omar.housingunits.Utilities.Constants;
+import com.omar.housingunits.Utilities.LoadingDialog;
+import com.omar.housingunits.Utilities.PreferenceManager;
 import com.omar.housingunits.databinding.FragmentLoginBinding;
 
 /**
@@ -27,6 +35,7 @@ public class LoginFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private FragmentLoginBinding binding;
+    private PreferenceManager sp;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -66,6 +75,8 @@ public class LoginFragment extends Fragment {
         binding = FragmentLoginBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        sp = new PreferenceManager(getContext());
+
         binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,6 +89,89 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Login();
+            }
+        });
+
+        binding.emailLogin.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                binding.textInputLayoutEmail.setErrorEnabled(false);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        binding.passLogin.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                binding.textInputLayoutPass.setErrorEnabled(false);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         return root;
+    }
+
+    private void Login() {
+        String email, pass;
+        email = binding.emailLogin.getText().toString().trim();
+        pass = binding.passLogin.getText().toString().trim();
+
+        if (email.isEmpty()){
+            binding.emailLogin.setError("Email is Require!");
+            binding.emailLogin.requestFocus();
+            return;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            binding.emailLogin.setError("Your Email is invalid!");
+            binding.emailLogin.requestFocus();
+            return;
+        }
+        if (pass.isEmpty()){
+            binding.passLogin.setError("Password is Require!");
+            binding.passLogin.requestFocus();
+            return;
+        }
+        if (pass.length() < 6 ){
+            binding.passLogin.setError("Password is invalid!");
+            binding.passLogin.requestFocus();
+            return;
+        }
+
+        sp.putString(Constants.KEY_LOGIN_STATUS, "yes");
+
+        LoadingDialog loadingDialog = new LoadingDialog(getActivity());
+        loadingDialog.startLoadingDialog();
+
+        Handler h = new Handler();
+        h.postDelayed(() -> {
+
+            loadingDialog.dismissDialog();
+
+            getActivity().finish();
+
+        }, 5000);
+
     }
 }
