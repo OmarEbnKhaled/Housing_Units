@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         loadFragment(new CategoryFragment());
 
         setupActivity();
+
     }
 
     /*===================================================================================*/
